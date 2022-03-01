@@ -1,5 +1,5 @@
 import {API_KEY, API_URL} from './const';
-import {jsonToQueryParams, getOS} from '../util';
+import {jsonToQueryParams, getOS} from '../utils';
 
 export const test = () => {
   var xhr = new XMLHttpRequest();
