@@ -9,9 +9,10 @@ export const test = () => {
     pageNo: 1,
     MobileOS: getOS(),
     MobileApp: 'AppTest',
-    areaCode: 3,
+    areaCode: 36,
   };
   var queryParams = jsonToQueryParams(variables);
+  console.log('START');
 
   xhr.open('GET', API_URL('areaCode') + queryParams);
   xhr.onreadystatechange = function () {

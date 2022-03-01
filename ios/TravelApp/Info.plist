@@ -33,7 +33,7 @@
 			<key>api.visitkorea.or.kr</key>
 			<dict>
 				<key>NSExceptionAllowsInsecureHTTPLoads</key>
-				<false/>
+				<true/>
 			</dict>
 			<key>localhost</key>
 			<dict>

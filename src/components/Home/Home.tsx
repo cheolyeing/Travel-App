@@ -1,23 +1,23 @@
 import React from 'react';
 import {View, Text} from 'react-native';
 
-import {useSearchOptioncontext} from '../../contexts/SearchOptionContext';
+import {test} from '../../api';
+
+import {useAreaContext} from '../../contexts/AreaContext';
 
 const Home = () => {
-  const {area, setArea, category, setCategory} = useSearchOptioncontext();
+  const {area, setArea} = useAreaContext();
 
   setTimeout(() => {
-    setArea?.('1초');
+    setArea?.({...area, lv2: {name: '강남구', code: 1}});
   }, 1000);
-  setTimeout(() => {
-    setCategory?.('2초');
-  }, 2000);
+
+  test();
 
   return (
     <View>
       <Text>홈</Text>
-      <Text>지역: {area}</Text>
-      <Text>카테고리: {category}</Text>
+      <Text>지역: {area.lv2?.name}</Text>
     </View>
   );
 };

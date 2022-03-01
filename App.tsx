@@ -8,19 +8,19 @@ import MyIcon from './assets/images/icon_my.svg';
 import Home from './src/components/Home';
 import My from './src/components/My';
 
-import {SearchOptionContextProvider} from './src/contexts/SearchOptionContext';
+import {AreaContextProvider} from './src/contexts/AreaContext';
 
 const Tab = createBottomTabNavigator();
 
 const App = () => {
   return (
     <NavigationContainer>
-      <SearchOptionContextProvider>
+      <AreaContextProvider>
         <Tab.Navigator>
           <Tab.Screen name="Home" component={Home} options={{tabBarIcon: ({color}) => <HomeIcon color={color} />}} />
           <Tab.Screen name="My" component={My} options={{tabBarIcon: ({color}) => <MyIcon color={color} />}} />
         </Tab.Navigator>
-      </SearchOptionContextProvider>
+      </AreaContextProvider>
     </NavigationContainer>
   );
 };
